@@ -1,0 +1,112 @@
+The objective of this assignment is to recreate my own printf function.
+
+A format specifier follows this prototype :
+%[flags][width][.precision][length]specifier
+
+These are format conversion specifiers that have to be accounted for
+ s = string.
+ S =
+ p = pointer address.
+ d = signed decimal integer.
+ D
+ i = signed decimal integer
+ o = unsigned octal.
+ O
+ u = unsigned decimal integer.
+ U
+ x = unsigned hexadecimal integer
+ X = unsigned hexadecimal integer (uppercase)
+ c = character
+ C
+
+
+
+
+For Bonus
+eE = scientific notation (mantissa/ exponent), lowercase ex: 3.9265e+2
+fF = decimal floating point ex: 392.65
+gG = use th shortest representation: %e or %f ex: 392.65
+aA = hexadecimal floating point ex: -0xc.90fep-2
+n = Nothing printed.  The corresponding argument must be a pointer to a signed
+    int.
+    the number of characters written so far is stored in the pointed location.
+
+Manage
+ %% = A % followed by another % character will write a single % to the stream.
+
+
+//Flags\\
+# = used with o, x, or X specifiers the value is preceeded with 0, 0x or 0X
+    respectively for values different than zero.
+
+0 = Left- pads the number with zeroes (0) instead of spaces when width is
+    specified
+
+- = Left-justify within the given field width; Right justification is the
+    default
+
++ = Forces to preceed the result with a plus or minus sign (+ or -) even for
+    positive numbers. By default, only negative numbers are preceded with
+    a - sign.
+
+ (space) = If no sign is going to be write, a blank space is inserted before
+          the value.
+
+//length\\
+hh - z (see specifiers below)
+h
+l
+ll
+j
+z
+
+//Bonus Flags\\
+*
+$
+L
+'
+
+//Width\\
+(number) = Minimum number of characters to be printed.  If the value to be
+           printed is shorter than this number,the result is padded with
+           blanks spaces.  The value is not truncated even if the result is
+           larger.
+
+*        = The width is not specified in the format string, but as an additional
+           integer value argument preceding the argument that has to be
+           formatted.  (not used with strings)
+
+//.precision\\
+.number = For integer specifiers (d, i, o, u, x, X): precision specifies the
+          minimum number of digits to be written.  If the value to be written is
+          shorter than this number, the result is padded with leading zeros.
+          The value is not truncated even if the result is longer. A precision
+          of 0 means that no character is written for the value 0.
+          For a, A, e, E, f and F specifiers: this is the number of digits to be
+          printed after the decimal point (by default, this is 6).
+          For g and G specifiers: This is the maximum number of significant
+          digits to be printed.
+          For s: this is the maximum number of characters to be printed. By
+          default all characters are printed until the ending null character
+          is encountered.
+          If the period is specified without an explicit value for precision,
+          0 is assumed.
+
+.*      = The precision is not specified in the format string, but as an
+          additional integer value argument preceding the argument that has to
+          be formatted.
+
+
+
+                                              specifiers
+
+length|	    d i     |     u o x X	      |     f F e E g G a A	  |     c	  |     s	  |  p	   | n |
+(none)	int 	         unsigned int	          double	                int	    char*	   void*	int*
+hh	    signed char	   unsigned char					                                                signed char*
+h	      short int	     unsigned short int					                                            short int*
+l	      long int	     unsigned long int	                        	wint_t 	wchar_t*		      long int*
+ll	    long long int  unsigned long long int				                                        	long long int*
+j	      intmax_t	     uintmax_t					                                                    intmax_t*
+z	      size_t	       size_t					                                                        size_t*
+t	      ptrdiff_t	     ptrdiff_t					                                                    ptrdiff_t*
+L			                                        long double
