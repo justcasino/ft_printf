@@ -27,7 +27,7 @@ void ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num,
     if (conversion->width > (unsigned int)num_len)
         num_space = conversion->width - num_len;
    if (!conversion->flags.left_just)
-      print_extra_width(format, conversion, num_len, pad);
+      print_extra_width(format, conversion, num_space, pad);
     ft_putstr("0x");
    while (str_num[i])
    {
