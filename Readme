@@ -1,4 +1,4 @@
-The objective of this assignment is to recreate my own printf function.
+The objective of this assignment is to recreate a  printf function.
 
 A format specifier follows this prototype :
 %[flags][width][.precision][length]specifier
