@@ -40,7 +40,7 @@ void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
         format->num_writt++;
         i++;
     }
-    free(str_num);
+//    free(str_num);
 }
 
 void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,

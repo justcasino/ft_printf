@@ -43,7 +43,7 @@ void    ft_putnbr_base(t_format *format, t_conversion *conversion,
     }
     if (conversion->flags.left_just)
         print_extra_width(format, conversion, num_space, pad);
-    free(str_num);
+  //  free(str_num);
 }
 
 void    check_length(t_format *format, t_conversion *conversion,

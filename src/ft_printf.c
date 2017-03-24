@@ -49,21 +49,21 @@ void	print_args(t_format *format, t_conversion *conversion, va_list args)
 		print_int(format, conversion, args);
   	else if (conversion->specifier == CHAR)
     {
-        if (conversion->length == L)
-            print_wint(format, conversion, va_arg(args, wint_t char_in));
-        else
-            print_c(format, conversion, va_arg(args, int char_in));
+       // if (conversion->length == L)
+       //     print_wint(format, conversion, va_arg(args, wint_t char_in));
+       // else
+            print_c(format, conversion, va_arg(args, int));
     }
 	else if (conversion->specifier == STRING)
-        if (conversion->specifier == L)
-            print_wchar(format, conversion, va_arg(args, wchar_t *))
+      //  if (conversion->specifier == L)
+         //   print_wchar(format, conversion, va_arg(args, wchar_t *))
 		print_string(format, conversion, va_arg(args, char *));
  	else if (conversion->specifier == OCTAL)
         print_base(format, conversion, args);
     else if (conversion->specifier == HEX_LOWER || conversion->specifier == HEX_UPPER)
          print_base(format, conversion, args);
-	else if (conversion->specifier == POINT)
-        print_pointer(format, conversion, va_arg(args, void*);)
+	else if (conversion->specifier == POINTER)
+        print_pointer(format, conversion, va_arg(args, void*));
 
 }
 

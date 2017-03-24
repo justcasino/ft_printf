@@ -29,7 +29,7 @@ void    print_chars(t_format *format, t_conversion *conversion,
         char *incoming)
 {
     if (!conversion->flags.left_just)
-        left_justify(format, conversion incoming);
+        left_justify(format, conversion, incoming);
     else
         right_justify(format, conversion, incoming);
 }

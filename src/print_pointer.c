@@ -22,12 +22,12 @@ void ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num,
 
     num_space = 0;
     i = 0;
-    num_len = int_len(num, base) + 2;
+    num_len = (int)(int_len(num, base) + 2);
     str_num = ft_itoa_base(num, conversion);
-    if (conversion->width > (unsigned int)num_len &&)
+    if (conversion->width > (unsigned int)num_len)
         num_space = conversion->width - num_len;
    if (!conversion->flags.left_just)
-      print_extra_width(format, conversion->precision, num_len);
+      print_extra_width(format, conversion, num_len, pad);
     ft_putstr("0x");
    while (str_num[i])
    {
@@ -39,7 +39,7 @@ void ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num,
        print_extra_width(format, conversion, num_space, pad);
 }
 
-void print_pointer(t_format format, t_conversion, conversion, void *pointer)
+void print_pointer(t_format *format, t_conversion *conversion, void *pointer)
 {
     uintmax_t   new_point;
     char        pad;
