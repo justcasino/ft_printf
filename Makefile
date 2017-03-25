@@ -100,7 +100,7 @@ $(NAME): $(OBJ)
 	#@echo "$(CYAN) Compiiling and building library..."
 	#@echo "$(CYAN)objects created $(DARK)"
 	$(AR) $@ $^
-	#ranlib $@
+	ranlib $@
 	#gcc $(LIBLINK) -o $(NAME) $(OBJ)
 #	@echo "$(RESET)$(CYAN)$(NAME) has been made $(RESET)\n"
 	#gcc -o $(NAME) $(OBJ)
