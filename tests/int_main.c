@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "./includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int	main(void)
 {
     ft_printf("%-20s: <%d> \n", "ft_printf %d ", -123456789);
     printf("%-20s: <%d> \n", "printf %d ", -123456789);
-      printf("%-20s:  <%d> \n", "printf %d ", -123456789);
+    printf("%-20s:  <%d> \n", "printf %d ", -123456789);
     ft_printf("%-20s:  <%d> \n", "ft_printf %d ", -123456789);
 	printf("%-20s:  <%15d> \n", "printf %15d ", -123456789);
     ft_printf("%-20s:  <%15d> \n", "ft_printf %15d ", -123456789);

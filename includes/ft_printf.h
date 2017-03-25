@@ -143,8 +143,8 @@ void    print_base(t_format *format, t_conversion *conversion, va_list args);
 /*
 ** functions in print_string.c
 */
-void    print_precision_string(t_format *format, t_conversion *conversion,
-        char *string);
+void    print_chars(t_format *format, t_conversion *conversion, char *incoming);
+void    print_c(t_format *format, t_conversion *conversion, char incoming);
 void    print_string(t_format *format, t_conversion *conversion,
         char *string);
 /*
@@ -159,5 +159,17 @@ void    left_justify(t_format *format, t_conversion *conversion, char *s);
 void    print_pointer(t_format *format, t_conversion *conversion, void *pointer);
 void    ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num, char pad, int base);
 
+/*
+** functions from libft
+*/
+void    *ft_memalloc(size_t size);
+void    *ft_memset(void *b, int c, size_t len);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putchar(char c);
+void    ft_putstr(char const *s);
+char    *ft_strnew(size_t size);
+size_t	ft_strlen(const char *s);
+char	  *ft_strcpy(char *dst, const char *src);
+int	    ft_isdigit(int c);
 
 #endif

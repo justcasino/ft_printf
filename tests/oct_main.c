@@ -11,13 +11,16 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "./includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int main()
 {
-//    int a;
+    int a;
+    int *b;
 
-//    a = 016;
+
+    a = 016;
+    b = &a;
     printf("********** %s ************\n", "OCTAL");
     printf("%-28s:  = < %d>\n","printf %d var = 016", 016);
     ft_printf("%-28s:  = < %d>\n", " ft_printf %d var = 016", 016);
@@ -39,5 +42,15 @@ int main()
     ft_printf("%-28s:  = <%-29x>\n", "ft_printf %-29x var = 1000", 1000);
     printf("%-28s:  = <%029x>\n", "printf %029x var = 14", 14);
     ft_printf("%-28s:  = <%029x>\n", "ft_printf %029x var = 14", 14);
+    printf("********** %s ************\n", "POINTER");
+    printf("%-28s:  = <%p>\n", "printf %p var = 14", b);
+    ft_printf("%-28s:  = <%p>\n", "ft_printf %p var = 14", b);
+    printf("********** %s ************\n", "RETURN VALUE");
+    printf("%-28s:  = <%d>\n", "printf %d var = 9000", ft_printf("%d", 9000));
+
+    printf("********** %s ************\n", "CHAR");
+
+    printf("%-28s:  = <%c>\n", "printf %c var = p", 'p');
+    ft_printf("%-28s:  = <%c>\n", "printf %c var = p", 'p');
     return (0);
 }

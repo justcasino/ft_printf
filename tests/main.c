@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "./includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
 int main(void)
 {
@@ -37,4 +37,5 @@ int main(void)
     ft_printf("%-18s: <%-.25s> \n", "ft_printf %-.25s", "Test String");
     printf("%-18s: <%.15s> \n","printf %.15s", "Test String");
     ft_printf("%-18s: <%.15s> \n","ft_printf %.15s", "Test String");
+    return (0);
 }
