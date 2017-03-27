@@ -16,32 +16,32 @@ CFLAGS 	= gcc -Wall -Wextra -Werror
 
 AR = ar rc
 
-SRC		= ft_itoa_uintmax.c 	\
+SRC		= ft_itoa_uintmax.c 				\
 		  ft_printf.c						\
-		  ft_putnbr_just.c			\
-		  invalid_specifier.c		\
-		  manage_flags.c				\
-		  manage_length.c				\
-		  manage_precision.c		\
-		  manage_specifier.c		\
-		  manage_width.c				\
+		  ft_putnbr_just.c					\
+		  invalid_specifier.c				\
+		  manage_flags.c					\
+		  manage_length.c					\
+		  manage_precision.c				\
+		  manage_specifier.c				\
+		  manage_width.c					\
 		  pf_atoi.c							\
-		  print_helper.c				\
+		  print_helper.c					\
 		  print_int.c						\
-		  print_string.c				\
-		  string_justify.c			\
-		  ft_itoa_uintmax.c			\
-		  print_base.c					\
-			print_pointer.c				\
-		  ft_memalloc.c					\
+		  print_string.c					\
+		  string_justify.c					\
+		  ft_itoa_uintmax.c					\
+		  print_base.c						\
+		  print_pointer.c					\
+		  ft_memalloc.c						\
 		  ft_memset.c						\
-		  ft_putchar_fd.c				\
-		  ft_putchar.c					\
+		  ft_putchar_fd.c					\
+		  ft_putchar.c						\
 		  ft_putstr.c						\
 		  ft_strnew.c						\
-			ft_strlen.c						\
-			ft_strcpy.c						\
-			ft_isdigit.c
+		  ft_strlen.c						\
+		  ft_strcpy.c						\
+		  ft_isdigit.c
 
 
 
