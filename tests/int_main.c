@@ -15,6 +15,9 @@
 
 int	main(void)
 {
+    int i;
+
+    i = -214743648;
     ft_printf("%-20s: <%d> \n", "ft_printf %d ", -123456789);
     printf("%-20s: <%d> \n", "printf %d ", -123456789);
     printf("%-20s:  <%d> \n", "printf %d ", -123456789);
@@ -55,6 +58,8 @@ int	main(void)
     ft_printf("%-20s:  <% .10d> \n", "ft_printf % .10d ", 123456789);
     printf("%-20s:  <%10.20d> \n", "printf %10.20d ", 123456789);
     ft_printf("%-20s:  <%10.20d> \n", "ft_printf %10.20d ", 123456789);
+    printf("%-20s:  <%d> \n", "printf %-d ", i);
+    ft_printf("%-20s:  <%-d> \n", "ft_printf %-d ", i);
     printf("%-20s:   \n", "printf %-020d print an error");
     ft_printf("%-20s:   \n", "ft_printf %-020d print an error");
     printf("%-20s:   \n", "printf % +.15d print an error");
@@ -67,5 +72,8 @@ int	main(void)
     ft_printf("%-20s:   \n", "ft_printf %+ d prints an error");
     printf("%-20s:   \n", "printf %+20.15d prints an error");
     ft_printf("%-20s:   \n", "ft_printf %+20.15d prints an error");
+    printf("%-20s:  <%-13hhd> \n", "printf %hhd", 'X');
+    
+    ft_printf("%-20s:  <%-13hhd> \n", "ft_printf %hhd", 'X');
 	return (0);
 }

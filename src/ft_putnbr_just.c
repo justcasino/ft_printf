@@ -13,6 +13,17 @@
 #include "../includes/ft_printf.h"
 #include "../libft/includes/libft.h"
 
+//void    ft_putnbr_hh(t_format *format, t_conversion *conversion, intmax_t num)
+//{
+  /*    char    pad;
+
+    (conversion->flags.pad_wz = 1 ? pad = '0' : pad = ' ' )
+    if (num < 0)
+    {
+        num = num * -1;
+        conversion->is_negative = 1;
+    } */
+//}
 
 void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
 		uintmax_t num, char pad)

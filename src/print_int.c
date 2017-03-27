@@ -23,8 +23,8 @@ void	unsigned_int(t_format *format, t_conversion *conversion, va_list args)
         pad = ' ';
 	if (conversion->length == HH)
 	{
-		//ft_putnbr_intmax() this function has to be written
-		return;
+		//ft_putnbr_intmax(format, conversion,(signed char)va_arg(args, int)) this function has to be written
+		num = (unsigned char)va_arg(args,int);
 	}
 	else if (conversion->length == H)
 		num = (unsigned short int)va_arg(args, int);
@@ -58,36 +58,14 @@ void	neg_signed_int(t_format *format, t_conversion *conversion,
 	if (num < 0)
 	{
 		num = num * -1;
-//		ft_putchar('-');
 		conversion->is_negative = 1;
-//		format->num_writt++;
 	}
 	str_num = num;
 	if (conversion->flags.left_just)
 		ft_putnbr_left_just(format, conversion, str_num, pad);
 	else
 		ft_putnbr_right_just(format, conversion, str_num, pad);
-/*	is_neg = 0;
-	if (num < 0)
-	{
-		if (conversion->width && !conversion->flags.left_just &&
-				!conversion->flags.pad_wz)
-		{
-			num = -1 * num;
-			format->num_writt++;
-			is_neg = 1;
-		}
-	conversion->is_negative = 1;
-	}
-	if (conversion->flags.left_just)
-		ft_putnbr_left_just(number, conversion, format);
-	else
-		ft_putnbr_right_just(number, conversion, format);
-*/
-
-
 }
-
 
 void	signed_int(t_format *format, t_conversion *conversion, va_list args)
 {
@@ -96,7 +74,6 @@ void	signed_int(t_format *format, t_conversion *conversion, va_list args)
 	if (conversion->length == HH)
 	{
 		num = (signed char)va_arg(args, int);
-      return;
     }
 	else if (conversion->length == H)
 		num = va_arg(args, int);

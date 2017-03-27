@@ -85,6 +85,7 @@ void    ft_putnbr_right_just(t_format *format, t_conversion *conversion,
         uintmax_t num, char pad);
 void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,
         uintmax_t num, char pad);
+void    ft_putnbr_hh(t_format *format, t_conversion *conversion, intmax_t num);
 /*
 ** functions in non_specifier.c
 */

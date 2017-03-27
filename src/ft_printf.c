@@ -12,35 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-/*char    *conversion(unsigned int num, int base)
-{
-  static char
-}
-int     manage_cids(char **format, va_list ap)
-{
-  int i;
-
-  if (*(format) == 'c')
-    ft_putchar(va_arg(ap, char));
-  else if (*(*format) == 'C')
-
-  else if (*(*format) == 'i')
-
-  else if (*(*format) == 'd')
-  {
-    i = va_arg(ap, int);
-    if (i < 0)
-    {
-      i = -i;
-      ft_putchar('-');
-    }
-    ft_putstr()
-  }
-  else if (*(*format) == 'D')
-  else if (*(*format) == 's')
-    ft_putstr(va_arg(ap, char *));
-
-}*/
 void	print_args(t_format *format, t_conversion *conversion, va_list args)
 {
 	if (conversion->specifier == S_DECIMAL)
@@ -77,7 +48,6 @@ void    manage_format(t_format *format, va_list args)
   manage_precision(format, &conversion);
   manage_length(format, &conversion);
   manage_specifier(format, &conversion);
-  // have a case if conversion.specifier is nothing
   if (conversion.specifier == NONE)
       return ;
   print_args(format, &conversion, args);
@@ -105,6 +75,7 @@ void    traverse(t_format *format, va_list args)
     else
     {
       ft_putchar(FSP);
+      // try write(1, FSP, 1);
       format->num_writt++;
       format->pos++;
     }
@@ -117,8 +88,9 @@ int     ft_printf(const char *string, ...)
   t_format     format;
 
   ft_memset(&format, '\0', sizeof(format));
-  va_start(args, string);
   format.string = string;
+  va_start(args, string);
+ // format.string = string;
   traverse(&format, args);
   va_end(args);
 
