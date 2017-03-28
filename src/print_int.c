@@ -72,9 +72,7 @@ void	signed_int(t_format *format, t_conversion *conversion, va_list args)
 	intmax_t num;
 
 	if (conversion->length == HH)
-	{
 		num = (signed char)va_arg(args, int);
-    }
 	else if (conversion->length == H)
 		num = va_arg(args, int);
 	else if (conversion->length == L)

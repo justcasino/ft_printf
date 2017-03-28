@@ -14,7 +14,7 @@ NAME	= libftprintf.a
 
 CFLAGS 	= gcc -Wall -Wextra -Werror
 
-AR = ar rc
+AR = ar rcv
 
 SRC		= ft_itoa_uintmax.c 				\
 		  ft_printf.c						\
@@ -26,12 +26,12 @@ SRC		= ft_itoa_uintmax.c 				\
 		  manage_specifier.c				\
 		  manage_width.c					\
 		  pf_atoi.c							\
-		  print_helper.c					\
 		  print_int.c						\
 		  print_string.c					\
 		  string_justify.c					\
 		  ft_itoa_uintmax.c					\
 		  print_base.c						\
+		  print_helper.c					\
 		  print_pointer.c					\
 		  ft_memalloc.c						\
 		  ft_memset.c						\
@@ -65,7 +65,7 @@ LIBOBJ  = ./libft/obj
 
 
 # Colors
-REST		=	\033[0m
+RESET		=	\033[0m
 DARK		=	\033[1;32m
 RED			=	\033[31m
 GREEN		=	\033[32m
@@ -81,29 +81,17 @@ BOLDWHITE	=	\033[1m\033[37m
 all: obj libft $(NAME)
 
 obj:
-	mkdir -p $(OBJDIR)
-
-ug:
-	cd $(LIBDIR)
-	make fclean
+	@mkdir -p $(OBJDIR)
 
 $(OBJDIR)%.o:$(SRCDIR)%.c
-	$(CFLAGS)  $(LIBINC) -I $(INCDIR) -o $@ -c $^
-	#$(CFLAGS) -I $(INCDIR) -o $@ -c $<
-
-libft: $(LIBFT)
-
-$(LIBFT):
-	make -C ./libft
+	@$(CFLAGS) -I $(INCDIR) -o $@ -c $^
 
 $(NAME): $(OBJ)
-	#@echo "$(CYAN) Compiiling and building library..."
-	#@echo "$(CYAN)objects created $(DARK)"
-	$(AR) $@ $^
-	ranlib $@
-	#gcc $(LIBLINK) -o $(NAME) $(OBJ)
-#	@echo "$(RESET)$(CYAN)$(NAME) has been made $(RESET)\n"
-	#gcc -o $(NAME) $(OBJ)
+	@echo "$(CYAN) Compiling and building library..."
+	@echo "$(GREEN) Objects created $(DARK)"
+	@$(AR) $@ $^
+	@ranlib $@
+	@echo " $(RESET)$(CYAN)$(NAME) has been made $(RESET)\n"
 
 clean:
 	rm -rf $(OBJDIR)

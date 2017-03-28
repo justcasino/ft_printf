@@ -36,6 +36,8 @@ void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
 	num_space = 0;
     i = 0;
     num_len = int_len(num, 10);
+    if (conversion->is_negative)
+        num_len = num_len + 1;
     str_num = ft_itoa_uintmax(num);
 	if (conversion->width > (unsigned int)num_len && !conversion->precision_on)
 		num_space = conversion->width - num_len;
@@ -65,9 +67,13 @@ void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,
     num_space = 0;
     i = 0;
     num_len = int_len(num, 10);
+    if (conversion->is_negative)
+        num_len = num_len + 1;
     str_num = ft_itoa_uintmax(num);
 //    if (conversion->flags.pad_wz)
  //       break; // attempt at error handling
+    if (num == 0 && conversion->precision && conversion->precision == 0)
+        return ;
 	if (conversion->width >(unsigned int)num_len && !conversion->precision_on)
 		num_space = conversion->width - num_len;
 	else if (conversion->width > (unsigned int)num_len &&

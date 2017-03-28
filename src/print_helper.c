@@ -11,7 +11,21 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-#include "../libft/includes/libft.h"
+
+/*  void    print_hash(t_format *format, t_conversion *conversion)
+{
+    if (conversion->flags.hash)
+    {
+        if (conversion->specifier == OCTAL)
+            write(1, "0", 1);
+        else if (conversion->specifier == HEX_LOWER)
+            ft_putstr("0x");
+        else if (conversion->specifier == HEX_UPPER)
+            ft_putstr("0X");
+        format->num_writt++;
+    }
+}
+*/
 
 void    print_precision(t_format *format, t_conversion *conversion, 
         int zero_print, int num_len)

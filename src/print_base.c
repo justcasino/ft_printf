@@ -13,6 +13,27 @@
 #include "../includes/ft_printf.h"
 
 
+void    print_hash(t_format *format, t_conversion *conversion)
+{
+    if (conversion->flags.hash)
+    {
+        if (conversion->specifier == OCTAL)
+        {
+            write(1, "0", 1);
+            format->num_writt++;
+        }
+        else if (conversion->specifier == HEX_LOWER)
+        {
+            ft_putstr("0x");
+            format->num_writt++;
+        }
+        else if (conversion->specifier == HEX_UPPER)
+        {
+            ft_putstr("0X");
+            format->num_writt++;
+        }
+    }
+}
 
 void    ft_putnbr_base(t_format *format, t_conversion *conversion,
         uintmax_t num, char pad, int base)
@@ -25,6 +46,13 @@ void    ft_putnbr_base(t_format *format, t_conversion *conversion,
     num_space = 0;
     i = 0;
     num_len = int_len(num, base);
+    if (conversion->flags.hash)
+    {
+        if (conversion->specifier == OCTAL)
+            num_len += 1;
+        else
+            num_len += 2;
+    }
     str_num = ft_itoa_base(num, conversion);
     if (conversion->width > (unsigned int)num_len && !conversion->precision_on)
         num_space = conversion->width - num_len;
@@ -35,6 +63,7 @@ void    ft_putnbr_base(t_format *format, t_conversion *conversion,
          print_extra_width(format, conversion, num_space, pad);
     print_sign(format, conversion);
     print_precision(format, conversion, conversion->precision, num_len);
+    print_hash(format, conversion);
     while (str_num[i])
     {
         ft_putchar(str_num[i]);
@@ -57,10 +86,7 @@ void    check_length(t_format *format, t_conversion *conversion,
     else
         pad = ' ';
     if (conversion->length == HH)
-    {
-        //ft_putnbr_base() must write this
-        return;
-    }
+        num = (unsigned char)va_arg(args, int);
     else if (conversion->length == H)
         num = (unsigned short int)va_arg(args, int);
     else if (conversion->length == L)

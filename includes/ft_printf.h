@@ -85,7 +85,7 @@ void    ft_putnbr_right_just(t_format *format, t_conversion *conversion,
         uintmax_t num, char pad);
 void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,
         uintmax_t num, char pad);
-void    ft_putnbr_hh(t_format *format, t_conversion *conversion, intmax_t num);
+//void    ft_putnbr_hh(t_format *format, t_conversion *conversion, intmax_t num);
 /*
 ** functions in non_specifier.c
 */
@@ -138,6 +138,7 @@ void    print_int(t_format *format, t_conversion *conversion,
 /*
 ** functions in print_base.c
 */
+void    print_hash(t_format *format, t_conversion *conversion);
 void    ft_putnbr_base(t_format *format, t_conversion *conversion, uintmax_t num, char pad, int base);
 void    check_length(t_format *format, t_conversion *conversion, va_list args, int base);
 void    print_base(t_format *format, t_conversion *conversion, va_list args);
