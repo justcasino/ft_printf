@@ -26,17 +26,35 @@
 	}
  } */
 void    print_chars(t_format *format, t_conversion *conversion,
-        char *incoming)
+        char incoming)
 {
     if (!conversion->flags.left_just)
-        left_justify(format, conversion, incoming);
+    {
+        while (conversion->width > 1)
+        {
+            write(1, " " ,1);
+            format->num_writt++;
+            conversion->width--;
+         }
+        write(1, &incoming, 1);
+        format->num_writt++;
+    }
     else
-        right_justify(format, conversion, incoming);
+    {
+        write(1, &incoming, 1);
+        format->num_writt++;
+        while ( 1 < conversion->width)
+        {
+            write(1, " ", 1);
+            format->num_writt++;
+            conversion->width--;
+        }
+    }
 }
 
 void    print_c(t_format *format, t_conversion *conversion, char incoming)
 {
-    print_chars(format, conversion, &incoming);
+    print_chars(format, conversion, incoming);
 }
 
 void	print_string(t_format *format, t_conversion *conversion, char *string)

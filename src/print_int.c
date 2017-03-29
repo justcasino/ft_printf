@@ -51,7 +51,7 @@ void	neg_signed_int(t_format *format, t_conversion *conversion,
 	char		pad;
 	uintmax_t	str_num;
 
-	if (conversion->flags.pad_wz)
+	if (conversion->flags.pad_wz && !conversion->precision_on)
 		pad = '0';
 	else
 		pad = ' ';
@@ -74,7 +74,7 @@ void	signed_int(t_format *format, t_conversion *conversion, va_list args)
 	if (conversion->length == HH)
 		num = (signed char)va_arg(args, int);
 	else if (conversion->length == H)
-		num = va_arg(args, int);
+		num =(short int) va_arg(args, int);
 	else if (conversion->length == L)
 	  	num = va_arg(args, long);
   	else if (conversion->length == LL)

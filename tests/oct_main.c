@@ -52,7 +52,7 @@ int main()
 
     printf("********** %s ************\n", "CHAR");
 
-    printf("%-28s:  = <%c>\n", "printf %c var = p", 88);
-    ft_printf("%-28s:  = <%c>\n", "ftprintf %c var = p", 88);
+    printf("%-28s:  = <%c>\n", "printf %c var = 88", 88);
+    ft_printf("%-28s:  = <%c>\n", "ftprintf %c var = 88", 88);
     return (0);
 }

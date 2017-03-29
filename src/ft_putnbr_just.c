@@ -44,7 +44,12 @@ void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
 	else if (conversion->width > (unsigned int)num_len &&
             conversion->precision_on)
 		num_space = conversion->width - conversion->precision;
-    print_extra_width(format, conversion,num_space, pad);
+    if (conversion->precision_on && conversion->precision == 0 && num == 0)
+    {
+        print_extra_width(format, conversion, num_space, pad,  num_len);
+        return ;
+    }
+    print_extra_width(format, conversion,num_space, pad, num_len);
     print_sign(format, conversion);
     print_precision(format, conversion, conversion->precision, num_len);
     while (str_num[i])
@@ -87,5 +92,5 @@ void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,
         format->num_writt++;
         i++;
     }
-    print_extra_width(format, conversion, num_space, pad);
+    print_extra_width(format, conversion, num_space, pad, num_len);
 }

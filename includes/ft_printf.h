@@ -123,7 +123,7 @@ void    print_precision(t_format *format, t_conversion *conversion,
         int zero_print, int num_len);
 void    print_sign(t_format *format, t_conversion *conversion);
 void    print_extra_width(t_format *format, t_conversion *conversion,
-        int num_space, char pad);
+        int num_space, char pad, int num_len);
 /*
 ** functions in print_int.c
 */
@@ -145,7 +145,7 @@ void    print_base(t_format *format, t_conversion *conversion, va_list args);
 /*
 ** functions in print_string.c
 */
-void    print_chars(t_format *format, t_conversion *conversion, char *incoming);
+void    print_chars(t_format *format, t_conversion *conversion, char incoming);
 void    print_c(t_format *format, t_conversion *conversion, char incoming);
 void    print_string(t_format *format, t_conversion *conversion,
         char *string);
