@@ -59,27 +59,35 @@ void    manage_format(t_format *format, va_list args)
 */
 void    traverse(t_format *format, va_list args)
 {
-  while (FSP)
-  {
-    if (FSP == '%')
-      {
-        format->pos++;
+   // int count;
+  //  count = 0;
+     while (FSP)
+    {
         if (FSP == '%')
         {
-            write(1, "%", 1);
+            //count += 1;
+            format->pos++;
+             if (FSP == '%')
+             {
+                // count += 1;
+                // if (count == 2)
+                // {
+                    write(1, "%", 1);
+                    format->num_writt++;
+                    format->pos++;
+                //    count = 0;
+              //   }
+             }
+            manage_format(format, args);
+        }
+        else
+        {
+    //  ft_putchar(FSP);
+            write(1, &FSP, 1);
             format->num_writt++;
             format->pos++;
         }
-        manage_format(format, args);
-      }
-    else
-    {
-    //  ft_putchar(FSP);
-      write(1, &FSP, 1);
-      format->num_writt++;
-      format->pos++;
     }
-  }
 }
 
 int     ft_printf(const char *string, ...)

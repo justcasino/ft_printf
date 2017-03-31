@@ -104,6 +104,7 @@ void    print_extra_width(t_format *format, t_conversion *conversion,
         {
            ft_putchar('-');
            format->num_writt++;
+       //    num_space--;
            conversion->is_negative = 0;
            conversion->flags.sign = 0;
         }

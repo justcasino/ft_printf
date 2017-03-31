@@ -42,11 +42,12 @@ void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
 	if (conversion->width > (unsigned int)num_len && !conversion->precision_on)
 		num_space = conversion->width - num_len;
 	else if (conversion->width > (unsigned int)num_len &&
-            conversion->precision_on && conversion->precision > (unsigned int)num_len)
+            conversion->precision_on)
+       // && conversion->precision > (unsigned int)num_len)
     {
         num_space = conversion->width - conversion->precision;
-        if (conversion->is_negative)
-            num_space -= 1;
+    //    if (conversion->is_negative)
+    //        num_space -= 1;
     }
     else if (conversion->width > (unsigned int)num_len &&
            (unsigned int) num_len > conversion->precision)

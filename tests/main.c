@@ -19,7 +19,7 @@ int main(void)
     int i;
 
     i = 15;
-    printf("%-18s: <%03c> <%.0p>\n","printf %s ", 0, 0);
+ //   printf("%-18s: <%03c> <%.0p>\n","printf %s ", 0, 0);
    // ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
 
     
@@ -33,19 +33,21 @@ int main(void)
 //    ft_printf("%-18s: <%3*d>\n","ft_printf %3*d ", 0, 0);
 //      printf("%-18s: <%hhC>, <%hhC>\n", "printf %hhC", 0, L'Á±≥');
 //      ft_printf("%-18s: <%hhC>, <%hhC>\n", "ft_printf %hhC", 0, L'Á±≥');
-  //  printf("%-18s: <%p>\n","printf %p ", &i);
-  //  ft_printf("%-18s: <%p> \n","ft_printf %p ", &i);
+  
+//   printf("%-18s: <%03c>\n","printf %03c ", 0);
+//   ft_printf("%-18s: <%03c> \n","ft_printf %03c ", 0);
 
-   // printf("%-18s: <%lp>\n","printf %lp ", 42);
-    //ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
+    printf("%-18s: <%-d>\n","printf %-d ", 42);
+    ft_printf("%-18s: <%-d>\n","ft_printf %-d ", 42);
 
-    //printf("%-18s: <%+o>\n","printf %+o ", 42);
+    printf("%-18s: <%%%%%%%%%%> \n","printf %%%%%%%%%% ");
+    ft_printf("%-18s: <%%%%%%%%%%> \n","printf %%%%%%%%%% ");
     //ft_printf("%-18s: <%+o\n","ft_printf %+o ", 42);
 
- /* printf("%-18s: <%zd> <%zd>\n","printf %s ", 0, 42);
-    ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
-
-    printf("%-18s: <%zd> <%zd>\n","printf %s ", 0, 42);
+ // printf("%-18s: <.%%.%%.%%.%%.%%.%%.%%.%%.>\%n","printf .%%.%%.%%.%%.%%.%%.%%.%%.");
+    
+ // ft_printf("%-18s: <.%%.%%.%%.%%.%%.%%.%%.%%.>\%n","printf .%%.%%.%%.%%.%%.%%.%%.%%.");
+ /*  printf("%-18s: <%zd> <%zd>\n","printf %s ", 0, 42);
     ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
 
     printf("%-18s: <%zd> <%zd>\n","printf %s ", 0, 42);
