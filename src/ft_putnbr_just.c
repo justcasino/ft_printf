@@ -46,12 +46,14 @@ void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
        // && conversion->precision > (unsigned int)num_len)
     {
         num_space = conversion->width - conversion->precision;
-    //    if (conversion->is_negative)
-    //        num_space -= 1;
+        if ((unsigned int)num_len > conversion->precision && num)
+            num_space = conversion->width - num_len;
+        if (conversion->precision > (unsigned int)num_len && conversion->is_negative)
+            num_space--;
     }
-    else if (conversion->width > (unsigned int)num_len &&
-           (unsigned int) num_len > conversion->precision)
-        num_space = conversion->width - num_len;
+  //  else if (conversion->width > (unsigned int)num_len &&
+    //       (unsigned int) num_len > conversion->precision)
+     //   num_space = conversion->width - num_len;
     if (conversion->precision_on && conversion->precision == 0 && num == 0)
     {
         print_extra_width(format, conversion, num_space, pad,  num_len);

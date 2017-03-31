@@ -23,9 +23,11 @@ int main(void)
    // ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
 
     
- //   printf("%-18s: <%15.4d>\n","printf %15.4d ", -42);
- //   ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", -42);
+    printf("%-18s: <%15.4d>\n","printf %15.4d ", 424242);
+   ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", 424242);
 
+   printf("%-18s: <%15.4d>\n","printf %15.4d ", -42);
+   ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", -42);
  //   printf("%-18s: <%5p>\n","printf %5p ", 0);
    // ft_printf("%-18s: <%5p>\n","ft_printf %5p ", 0);
 

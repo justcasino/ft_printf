@@ -59,24 +59,24 @@ void    manage_format(t_format *format, va_list args)
 */
 void    traverse(t_format *format, va_list args)
 {
-   // int count;
-  //  count = 0;
+    int count;
+    count = 0;
      while (FSP)
     {
         if (FSP == '%')
         {
-            //count += 1;
+            count += 1;
             format->pos++;
              if (FSP == '%')
              {
-                // count += 1;
-                // if (count == 2)
-                // {
+                 count += 1;
+                 if (count == 2)
+                 {
                     write(1, "%", 1);
                     format->num_writt++;
                     format->pos++;
-                //    count = 0;
-              //   }
+                    count = 0;
+                 }
              }
             manage_format(format, args);
         }
