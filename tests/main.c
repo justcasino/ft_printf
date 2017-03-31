@@ -15,6 +15,9 @@
 
 int main(void)
 {
+
+    printf("%-18s: <%s> \n","printf %s ", NULL);
+    ft_printf("%-18s: <%s> \n","ft_printf %s ", NULL);
     printf("%-18s: <%s> \n","printf %s ", "Test String");
     ft_printf("%-18s: <%s> \n", "ft_printf %s ", "Test String");
     printf("%-18s: <%s> \n","printf %0s", "error");

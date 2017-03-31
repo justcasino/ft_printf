@@ -61,8 +61,8 @@ void	print_string(t_format *format, t_conversion *conversion, char *string)
 {
 //    if (conversion->precision_on)
 //		print_precision_string(format, conversion, string);
-//    if (!string)
-//        string = ft_strdup("(null)");
+    if (!string)
+        string = ft_strdup("(null)");
 	if (conversion->flags.left_just)
 		left_justify(format, conversion, string);
 	else

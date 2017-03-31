@@ -173,5 +173,6 @@ char    *ft_strnew(size_t size);
 size_t	ft_strlen(const char *s);
 char	  *ft_strcpy(char *dst, const char *src);
 int	    ft_isdigit(int c);
+char    *ft_strdup(const char *s1);
 
 #endif

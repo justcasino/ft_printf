@@ -41,7 +41,8 @@ SRC		= ft_itoa_uintmax.c 				\
 		  ft_strnew.c						\
 		  ft_strlen.c						\
 		  ft_strcpy.c						\
-		  ft_isdigit.c
+		  ft_isdigit.c						\
+		  ft_strdup.c
 
 
 
