@@ -23,7 +23,6 @@ SRC		= ft_itoa_uintmax.c 				\
 		  manage_length.c					\
 		  manage_specifier.c				\
 		  manage_width_precision.c					\
-		  pf_atoi.c							\
 		  print_int.c						\
 		  print_string.c					\
 		  ft_itoa_uintmax.c					\

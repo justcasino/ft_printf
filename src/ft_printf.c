@@ -74,8 +74,8 @@ void    traverse(t_format *format, va_list args)
       }
     else
     {
-      ft_putchar(FSP);
-      // try write(1, FSP, 1);
+    //  ft_putchar(FSP);
+      write(1, &FSP, 1);
       format->num_writt++;
       format->pos++;
     }

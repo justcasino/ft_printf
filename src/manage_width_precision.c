@@ -29,3 +29,19 @@ void    manage_precision(t_format *format, t_conversion *conversion)
     conversion->precision = pf_atoi(format);
   }
 }
+
+/*
+** Wrote another atoi because, of the '-' flag has to be accounted for
+*/
+unsigned int  pf_atoi(t_format *format)
+{
+  unsigned int i;
+
+  i = 0;
+  while (FSP >= '0' && FSP <= '9')
+  {
+    i = i * 10 + (FSP - '0');
+    format->pos++;
+  }
+  return (i);
+}

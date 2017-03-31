@@ -93,7 +93,7 @@ char *ft_itoa_uintmax(uintmax_t num)
  //   ft_putnbr(len);
  //   ft_putchar(' ');
 //    ft_putnbr(ft_strlen(str_num));
-    while (len + 1> 0)
+    while (len > 0)
     {
         str_num[len - 1] = (num % 10) + '0';
         len--;

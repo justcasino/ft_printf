@@ -93,7 +93,8 @@ void    ft_putnbr_base(t_format *format, t_conversion *conversion,
 //    print_hash(format, conversion);
     while (str_num[i])
     {
-        ft_putchar(str_num[i]);
+        write(1, &str_num[i], 1);
+//        ft_putchar(str_num[i]);
         format->num_writt++;
         i++;
     }

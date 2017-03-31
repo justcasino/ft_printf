@@ -44,7 +44,8 @@ void    print_precision(t_format *format, t_conversion *conversion,
         while( zero_print > 0 && conversion->precision >
                 (unsigned int) num_len)
         {
-            ft_putchar('0');
+            write(1, "0", 1);
+  //          ft_putchar('0');
             format->num_writt++;
             zero_print--;
    //     }
@@ -52,19 +53,21 @@ void    print_precision(t_format *format, t_conversion *conversion,
 }
 
 void    print_sign(t_format *format, t_conversion *conversion)
-{ 
+{
     if (conversion->specifier == U_DECIMAL)
         return ;
     if (conversion->flags.sign)
     {
         if (conversion->is_negative)
         {
-            ft_putchar('-');
+            write(1, "-", 1);
+        //    ft_putchar('-');
             format->num_writt++;
         }
         else
         {
-            ft_putchar('+');
+            write(1, "+", 1);
+          //  ft_putchar('+');
             format->num_writt++;
          }
     }
@@ -72,18 +75,21 @@ void    print_sign(t_format *format, t_conversion *conversion)
     {
         if (!conversion->is_negative)
         {
-            ft_putchar(' ');
+            write(1, " ", 1);
+          //  ft_putchar(' ');
             format->num_writt++;
         }
        else if (conversion->is_negative)
         {
-            ft_putchar ('-');
+            write(1, "-", 1);
+            //ft_putchar ('-');
             format->num_writt++;
         }
     }
     else if (conversion->is_negative)
     {
-        ft_putchar ('-');
+        write(1, "-", 1);
+      //  ft_putchar ('-');
         format->num_writt++;
     }
 }
