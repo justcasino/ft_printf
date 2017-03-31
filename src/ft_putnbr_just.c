@@ -54,7 +54,8 @@ void	ft_putnbr_right_just(t_format *format, t_conversion *conversion,
     print_precision(format, conversion, conversion->precision, num_len);
     while (str_num[i])
     {
-        ft_putchar(str_num[i]);
+        write(1, &str_num[i], 1);
+//        ft_putchar(str_num[i]);
         format->num_writt++;
         i++;
     }
@@ -88,7 +89,8 @@ void    ft_putnbr_left_just(t_format *format, t_conversion *conversion,
     print_precision(format, conversion, conversion->precision, num_len);
     while (str_num[i])
     {
-        ft_putchar(str_num[i]);
+        write(1, &str_num[i], 1);
+//        ft_putchar(str_num[i]);
         format->num_writt++;
         i++;
     }

@@ -19,16 +19,13 @@ AR = ar rcv
 SRC		= ft_itoa_uintmax.c 				\
 		  ft_printf.c						\
 		  ft_putnbr_just.c					\
-		  invalid_specifier.c				\
 		  manage_flags.c					\
 		  manage_length.c					\
-		  manage_precision.c				\
 		  manage_specifier.c				\
-		  manage_width.c					\
+		  manage_width_precision.c					\
 		  pf_atoi.c							\
 		  print_int.c						\
 		  print_string.c					\
-		  string_justify.c					\
 		  ft_itoa_uintmax.c					\
 		  print_base.c						\
 		  print_helper.c					\
@@ -86,6 +83,11 @@ obj:
 
 $(OBJDIR)%.o:$(SRCDIR)%.c
 	@$(CFLAGS) -I $(INCDIR) -o $@ -c $^
+
+$(LIBFT):	$(LIBFT)
+
+$(LIBFT):
+	make -C ./libft
 
 $(NAME): $(OBJ)
 	@echo "$(CYAN) Compiling and building library..."

@@ -25,6 +25,58 @@
 		format->num_writt++;
 	}
  } */
+ void	right_justify(t_format *format, t_conversion *conversion, char *s)
+ {
+   size_t  i;
+   size_t  j;
+   size_t  len;
+
+   i = 0;
+   j = 0;
+   if (RIGHT_PREC_CHECK)
+     len = conversion->precision;
+   else
+     len = ft_strlen(s);
+   while ((len + i) < conversion->width)
+   {
+     write(1, " ", 1);
+//     ft_putchar(' ');
+     i++;
+     format->num_writt++;
+   }
+   while (s[j])
+   {
+     if (PRINT_PREC_CHECK)
+       break;
+     write(1, &s[j], 1);
+//     ft_putchar(s[j]);
+     j++;
+     format->num_writt++;
+   }
+ }
+
+ void	left_justify(t_format *format, t_conversion *conversion, char *s)
+ {
+   size_t i;
+
+   i = 0;
+   while (s[i])
+   {
+     if (LEFT_PREC_CHECK) //what cases is this needed
+       break ;
+     write(1, &s[i], 1);
+//     ft_putchar(s[i]);
+     i++;
+     format->num_writt++;
+   }
+   while (i < conversion->width)
+   {
+     write(1, " ", 1);
+//     ft_putchar(' ');
+     i++;
+     format->num_writt++;
+   }
+ }
 void    print_chars(t_format *format, t_conversion *conversion,
         char incoming)
 {

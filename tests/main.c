@@ -16,7 +16,10 @@
 int main(void)
 {
 
-    printf("%-18s: <%s> \n","printf %s ", NULL);
+    printf("%-18s: <%zd> <%zd>\n","printf %s ", 0, 42);
+    ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
+
+/*  printf("%-18s: <%s> \n","printf %s ", NULL);
     ft_printf("%-18s: <%s> \n","ft_printf %s ", NULL);
     printf("%-18s: <%s> \n","printf %s ", "Test String");
     ft_printf("%-18s: <%s> \n", "ft_printf %s ", "Test String");
@@ -39,6 +42,6 @@ int main(void)
     printf("%-18s: <%-.25s> \n", "printf %-.25s", "Test String");
     ft_printf("%-18s: <%-.25s> \n", "ft_printf %-.25s", "Test String");
     printf("%-18s: <%.15s> \n","printf %.15s", "Test String");
-    ft_printf("%-18s: <%.15s> \n","ft_printf %.15s", "Test String");
+    ft_printf("%-18s: <%.15s> \n","ft_printf %.15s", "Test String"); */
     return (0);
 }

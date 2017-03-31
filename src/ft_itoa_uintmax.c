@@ -42,9 +42,6 @@ int load_base(t_conversion *conversion)
 		base = 16;
 	else
 		base = 10;
-//    ft_putstr("\n ***the base: ");
-//    ft_putnbr(base);
-//    ft_putstr("***\n");
 	return (base);
 }
 
@@ -77,24 +74,10 @@ char *ft_itoa_base(uintmax_t num, t_conversion *conversion)
 	result[num_len--] = '\0';
     while (num)
     {
-//        if (conversion->specifier == OCTAL)
-//        {
-//           result[num_len] = (num % base);
-//            ft_putstr("\nnumbers being printed out: ");
-//            ft_putnbr(num % base);
-//            ft_putchar('\n');
-//            ft_putstr("----");
-//            ft_putnbr(1%8);
-//            ft_putchar('\n');
-//        }
-//		else
 			result[num_len] = base_char[num % base];
-//      ft_putchar(result[num_len]);
       num /= base;
       num_len--;
     }
-//    ft_putstr(base_char);
-//    ft_putchar('\n');
     return (result);
 }
 
@@ -110,7 +93,7 @@ char *ft_itoa_uintmax(uintmax_t num)
  //   ft_putnbr(len);
  //   ft_putchar(' ');
 //    ft_putnbr(ft_strlen(str_num));
-    while (len + 1 > 0)
+    while (len + 1> 0)
     {
         str_num[len - 1] = (num % 10) + '0';
         len--;
