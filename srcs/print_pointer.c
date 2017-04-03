@@ -56,7 +56,7 @@ void print_pointer(t_format *format, t_conversion *conversion, void *pointer)
     if (pointer == NULL)
     {
         ft_putstr("0x0");
-        format->num_writt +=2;
+        format->num_writt += 3;
         return ;
     }
     new_point = (uintmax_t)pointer;
