@@ -16,14 +16,17 @@
 int main(void)
 {
 
- //   int i;
+//    int i;
+    int *j;
+
  //   int j;
   //  int x;
   //  int y;
 
 //    x = 22;
 //    y = 24;
- //  i = printf("%p\n",&i);
+    j = NULL;
+    printf("%p\n", (void *)j);
  //  j = ft_printf("%p\n", &i); 
 //     printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
 //     ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
@@ -59,7 +62,7 @@ int main(void)
 //    i = printf("<%%%%%%%%%%>\n");
 //    j = ft_printf("<%%%%%%%%%%>\n");
 //    write(1, &i, 1);
-    ft_printf("%b", 100);
+//    ft_printf(GREEN "%b", 100);
 //    printf("%d   | |", i);
 //    printf("  %d\n", j);
   //  write(1, "\n", 1);
