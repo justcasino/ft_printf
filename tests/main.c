@@ -20,14 +20,14 @@ int main(void)
     int *j;
 
  //   int j;
-  //  int x;
-  //  int y;
+    int x;
+    int y;
 
   //  i = 42;
 //    y = 24;
   j = NULL;
-    printf("%p\n", (void *)j);
-    ft_printf("%p\n", (void *)j);
+  x =  printf("%p\n", (void *)j);
+  y =  ft_printf("%p\n", (void *)j);
  //  j = ft_printf("%p\n", &i); 
 //     printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
 //    ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
@@ -36,8 +36,8 @@ int main(void)
 //   i =  printf ("{%-30S\n}", L"我是一只猫。");
 //   j =  ft_printf ("{%-30S\n}", L"我是一只猫。");
  //   printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
-  //  printf("%d   | |", i);
-   // printf("  %d\n", j);
+    printf("%d   | |", x);
+    printf("  %d\n", y);
   //  printf("%d   | |", i);
    // printf("  %d\n", j);
 //    printf("%d %d\n", i, j);
