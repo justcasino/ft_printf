@@ -16,6 +16,7 @@
 #include "../libft/includes/libft.h"
 #include <stdarg.h>
 #include <stdint.h>
+#include <stdio.h> // delete this
 
 # define FSP (format->string[format->pos])
 # define RIGHT_PREC_CHECK (conversion->precision_on && conversion->precision < (unsigned int) ft_strlen(s) && conversion->specifier != INVALID)

@@ -16,17 +16,18 @@
 int main(void)
 {
 
-//    int i;
-    int *j;
+    int i;
+  //  int *j;
 
  //   int j;
   //  int x;
   //  int y;
 
-//    x = 22;
+    i = 42;
 //    y = 24;
-    j = NULL;
-    printf("%p\n", (void *)j);
+  //  j = NULL;
+  //  printf("%p\n", (void *)j);
+    ft_printf("% 4.5i", i);
  //  j = ft_printf("%p\n", &i); 
 //     printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
 //     ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
