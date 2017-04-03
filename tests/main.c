@@ -17,17 +17,21 @@ int main(void)
 {
 
     int i;
+    int j;
+  //  int x;
+  //  int y;
 
-    i = 15;
- //   printf("%-18s: <%03c> <%.0p>\n","printf %s ", 0, 0);
-   // ft_printf("%-18s: <%zd> <%zd> \n","ft_printf %s ", 0, 42);
+//    x = 22;
+//    y = 24;
+   i = printf("%p\n",&i);
+   j = ft_printf("%p\n", &i); 
 
-    
-    printf("%-18s: <%15.4d>\n","printf %15.4d ", 424242);
-   ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", 424242);
+//    printf("%d %d\n", i, j);
+ //   printf("%-18s: <%15.4d>\n","printf %15.4d ", 424242);
+ //  ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", 424242);
 
-   printf("%-18s: <%15.4d>\n","printf %15.4d ", -42);
-   ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", -42);
+//   printf("%-18s: <%15.4d>\n","printf %15.4d ", -42);
+//   ft_printf("%-18s: <%15.4d>\n","ft_printf %15.4d ", -42);
  //   printf("%-18s: <%5p>\n","printf %5p ", 0);
    // ft_printf("%-18s: <%5p>\n","ft_printf %5p ", 0);
 
@@ -39,11 +43,16 @@ int main(void)
 //   printf("%-18s: <%03c>\n","printf %03c ", 0);
 //   ft_printf("%-18s: <%03c> \n","ft_printf %03c ", 0);
 
-    printf("%-18s: <%-d>\n","printf %-d ", 42);
-    ft_printf("%-18s: <%-d>\n","ft_printf %-d ", 42);
-
-    printf("%-18s: <%%%%%%%%%%> \n","printf %%%%%%%%%% ");
-    ft_printf("%-18s: <%%%%%%%%%%> \n","printf %%%%%%%%%% ");
+  //   printf(" <%ls>\n", L"Á±≥");
+     //printf("%p", 0);
+  //  ft_printf("%-18s: <%ls>\n","ft_printf %ls ", L"Á±≥");
+//    i = printf("%-18s: <%%%%%%%%%%>\n","printf %%%%%%%%%% ");
+//    j = ft_printf("%-18s: <%%%%%%%%%%>\n","printf %%%%%%%%%% ");
+//    write(1, &i, 1);
+    printf("%d   | |", i);
+    printf("  %d\n", j);
+  //  write(1, "\n", 1);
+  //  write(1, &j, 1);
     //ft_printf("%-18s: <%+o\n","ft_printf %+o ", 42);
 
  // printf("%-18s: <.%%.%%.%%.%%.%%.%%.%%.%%.>\%n","printf .%%.%%.%%.%%.%%.%%.%%.%%.");

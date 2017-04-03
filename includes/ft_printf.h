@@ -29,6 +29,7 @@ typedef struct    s_format
   const char  *string;
   size_t      pos;
   size_t      num_writt;
+  int         zero_writ;
 }             t_format;
 
 typedef struct    s_flags

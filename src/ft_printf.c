@@ -73,6 +73,7 @@ void    traverse(t_format *format, va_list args)
                  if (count == 2)
                  {
                     write(1, "%", 1);
+              //      format->zero_writ = 1;
                     format->num_writt++;
                     format->pos++;
                     count = 0;
@@ -101,6 +102,7 @@ int     ft_printf(const char *string, ...)
  // format.string = string;
   traverse(&format, args);
   va_end(args);
-
+//  if (format.zero_writ == 1)
+ //     return (-1);
   return (format.num_writt);
 }

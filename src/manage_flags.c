@@ -49,7 +49,5 @@ int	check_flags(t_format *format, t_conversion *conversion)
 void	manage_flags(t_format *format, t_conversion *conversion)
 {
 	while(check_flags(format, conversion))
-	{
 		format->pos++;
-	}
 }

@@ -29,11 +29,13 @@ void ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num,
    if (!conversion->flags.left_just)
       print_extra_width(format, conversion, num_space, pad, num_len);
     ft_putstr("0x");
+    format->num_writt += 2;
    while (str_num[i])
    {
        write(1, &str_num[i], 1);
        //ft_putchar(str_num[i]);
        i++;
+       format->num_writt++;
    } 
    if (conversion->flags.left_just)
        print_extra_width(format, conversion, num_space, pad, num_len);
