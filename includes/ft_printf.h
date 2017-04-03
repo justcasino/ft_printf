@@ -176,7 +176,7 @@ void    left_justify(t_format *format, t_conversion *conversion, char *s);
  */
 void    print_pointer(t_format *format, t_conversion *conversion, void *pointer);
 void    ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num, char pad, int base);
-
+int     *print_none(t_format *format, t_conversion *conversion, int *count);
 /*
  ** functions from libft
  */

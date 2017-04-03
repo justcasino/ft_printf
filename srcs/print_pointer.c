@@ -30,11 +30,11 @@ void ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num,
       print_extra_width(format, conversion, num_space, pad, num_len);
     ft_putstr("0x");
     format->num_writt += 2;
-//    if (str_num) //this what you were testing DELETE THIS ******
- //   {
-  //      write(1, "0",1 );
-   //     format->num_writt++;
-    //}
+    if (str_num) //this what you were testing DELETE THIS ******
+    {
+        write(1, "0",1 );
+        format->num_writt++;
+    }
    while (str_num[i])
    {
        write(1, &str_num[i], 1);
@@ -57,3 +57,11 @@ void print_pointer(t_format *format, t_conversion *conversion, void *pointer)
     ft_putpnt(format, conversion, new_point, pad, 16);
 }
 
+//int  *print_none(t_format *format, t_conversion *conversion, int *count) // need to test this, what are the parameters
+//{
+//    int i;
+
+//    i = (signed int)format->num_writt;
+//    count = &i;
+//    return (count);
+//}

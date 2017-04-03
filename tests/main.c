@@ -16,28 +16,28 @@
 int main(void)
 {
 
-    int i;
-  //  int *j;
+  //  int i;
+    int *j;
 
  //   int j;
   //  int x;
   //  int y;
 
-    i = 42;
+  //  i = 42;
 //    y = 24;
-  //  j = NULL;
-  //  printf("%p\n", (void *)j);
-    ft_printf("% 4.5i", i);
+  j = NULL;
+    printf("%p\n", (void *)j);
+    ft_printf("%p\n", (void *)j);
  //  j = ft_printf("%p\n", &i); 
 //     printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
-//     ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
-//    i = printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
-//    j = ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
+//    ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
+  //  i = printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
+  //  j = ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
 //   i =  printf ("{%-30S\n}", L"我是一只猫。");
 //   j =  ft_printf ("{%-30S\n}", L"我是一只猫。");
  //   printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
- //   printf("%d   | |", i);
-  //  printf("  %d\n", j);
+  //  printf("%d   | |", i);
+   // printf("  %d\n", j);
   //  printf("%d   | |", i);
    // printf("  %d\n", j);
 //    printf("%d %d\n", i, j);

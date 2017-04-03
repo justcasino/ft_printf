@@ -72,6 +72,8 @@ int     valid_specifier(t_format *format, t_conversion *conversion)
   }
   else if (FSP == 'b')
       conversion->specifier = BINARY;
+  else if (FSP == 'n')
+      conversion->specifier = NONE;
   else
     return (0);
   return (1);
