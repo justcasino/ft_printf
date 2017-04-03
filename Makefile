@@ -22,7 +22,7 @@ SRC		= ft_itoa_uintmax.c 				\
 		  manage_flags.c					\
 		  manage_length.c					\
 		  manage_specifier.c				\
-		  manage_width_precision.c					\
+		  manage_width_precision.c			\
 		  print_int.c						\
 		  print_string.c					\
 		  ft_itoa_uintmax.c					\
@@ -52,7 +52,7 @@ LIBLINK = -L./libft -lft
 
 LIBDIR 	= ./libft/
 
-SRCDIR  = ./src/
+SRCDIR  = ./srcs/
 
 INCDIR	= ./includes/
 
@@ -86,7 +86,7 @@ $(OBJDIR)%.o:$(SRCDIR)%.c
 $(LIBFT):	$(LIBFT)
 
 $(LIBFT):
-	make -C ./libft
+	@make -C ./libft
 
 $(NAME): $(OBJ)
 	@echo "$(CYAN) Compiling and building library..."
