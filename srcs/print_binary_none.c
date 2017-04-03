@@ -1,7 +1,7 @@
 /* ************************************************************************** */
-/*                                                                            */
+/*                                i                                            */
 /*                                                       :::      ::::::::    */
-/*    main.c                                             :+:      :+:    :+:  */
+/*    print_binary_none.c                                             :+:      :+:    :+:  */
 /*                                                     +:+ +:+         +:+    */
 /*    By: jcasino <marvin@42.fr>                     +#+  +:+       +#+       */
 /*                                                 +#+#+#+#+#+   +#+          */
@@ -31,4 +31,9 @@ void     print_binary(t_format *format, t_conversion *conversion, va_list args)
         i *= 10;
     }
     neg_signed_int(format, conversion, num2);
+}
+
+void    print_none(t_format *format, int *written)
+{
+    *written = format->num_writt;
 }

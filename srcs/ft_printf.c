@@ -37,6 +37,8 @@ void	print_args(t_format *format, t_conversion *conversion, va_list args)
         print_pointer(format, conversion, va_arg(args, void*));
     else if (conversion->specifier == BINARY)
         print_binary(format, conversion, args);
+    else if (conversion->specifier == NONE)
+        print_none(format, va_arg(args, int *));
 
 }
 

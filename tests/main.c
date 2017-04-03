@@ -18,6 +18,7 @@ int main(void)
 
   //  int i;
     int *j;
+    int val;
 
  //   int j;
     int x;
@@ -25,6 +26,10 @@ int main(void)
 
   //  i = 42;
 //    y = 24;
+    printf("1234 %ni\n", &val);
+    printf("val = %d\n", val);
+    printf("1234 %ni\n", &val);
+    printf("val = %d\n", val);
   j = NULL;
   x =  printf("%p\n", (void *)j);
   y =  ft_printf("%p\n", (void *)j);
@@ -63,7 +68,7 @@ int main(void)
 //    i = printf("<%%%%%%%%%%>\n");
 //    j = ft_printf("<%%%%%%%%%%>\n");
 //    write(1, &i, 1);
-//    ft_printf(GREEN "%b", 100);
+    ft_printf(GREEN "%b", 100);
 //    printf("%d   | |", i);
 //    printf("  %d\n", j);
   //  write(1, "\n", 1);

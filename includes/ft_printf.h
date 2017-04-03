@@ -172,11 +172,12 @@ void    right_justify(t_format *format, t_conversion *conversion, char *s);
 void    left_justify(t_format *format, t_conversion *conversion, char *s);
 
 /*
- ** function in print_pointer.c
+ ** function in print_pointer.c and print_binary_none.c
  */
 void    print_pointer(t_format *format, t_conversion *conversion, void *pointer);
 void    ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num, char pad, int base);
-int     *print_none(t_format *format, t_conversion *conversion, int *count);
+void     print_none(t_format *format, int *written);
+void    print_binary(t_format *format, t_conversion *conversion, va_list args);
 /*
  ** functions from libft
  */

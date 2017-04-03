@@ -39,7 +39,7 @@ SRC		= ft_itoa_uintmax.c 				\
 		  ft_strcpy.c						\
 		  ft_isdigit.c						\
 		  ft_strdup.c						\
-		  print_binary.c
+		  print_binary_none.c
 
 
 
