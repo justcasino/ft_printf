@@ -26,10 +26,10 @@ int main(void)
 
   //  i = 42;
 //    y = 24;
-    printf("1234 %ni\n", &val);
-    printf("val = %d\n", val);
-    printf("1234 %ni\n", &val);
-    printf("val = %d\n", val);
+   // printf("1234 %ni\n", &val);
+   // printf("val = %d\n", val);
+    ft_printf("1234 %ni\n", &val);
+    ft_printf("val = %d\n", val);
   j = NULL;
   x =  printf("%p\n", (void *)j);
   y =  ft_printf("%p\n", (void *)j);

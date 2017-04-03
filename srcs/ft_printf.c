@@ -52,8 +52,8 @@ void    manage_format(t_format *format, va_list args)
   manage_precision(format, &conversion);
   manage_length(format, &conversion);
   manage_specifier(format, &conversion);
-  if (conversion.specifier == NONE)
-      return ;
+ // if (conversion.specifier == NONE)
+   //   return ;
   print_args(format, &conversion, args);
 }
 
