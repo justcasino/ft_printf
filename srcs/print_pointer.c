@@ -30,11 +30,19 @@ void ft_putpnt(t_format *format, t_conversion *conversion, uintmax_t num,
       print_extra_width(format, conversion, num_space, pad, num_len);
     ft_putstr("0x");
     format->num_writt += 2;
+<<<<<<< HEAD
    // if (!str_num) //this what you were testing DELETE THIS ******
    // {
    //     write(1, "0",1 );
   //      format->num_writt++;
 //    }
+=======
+//    if (str_num) //this what you were testing DELETE THIS ******
+ //   {
+  //      write(1, "0",1 );
+   //     format->num_writt++;
+    //}
+>>>>>>> faedae91a436e798d62e629189b9d4e46992c0f3
    while (str_num[i])
    {
        write(1, &str_num[i], 1);
@@ -55,9 +63,15 @@ void print_pointer(t_format *format, t_conversion *conversion, void *pointer)
     conversion->specifier = HEX_LOWER;
     if (pointer == NULL)
     {
+<<<<<<< HEAD
         ft_putstr("0x0");
         format->num_writt += 3;
         return ;
+=======
+            ft_putstr("0x0");
+            format->num_writt += 2;
+            return ;
+>>>>>>> faedae91a436e798d62e629189b9d4e46992c0f3
     }
     new_point = (uintmax_t)pointer;
     ft_putpnt(format, conversion, new_point, pad, 16);
