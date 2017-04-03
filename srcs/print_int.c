@@ -23,7 +23,6 @@ void	unsigned_int(t_format *format, t_conversion *conversion, va_list args)
         pad = ' ';
 	if (conversion->length == HH)
 	{
-		//ft_putnbr_intmax(format, conversion,(signed char)va_arg(args, int)) this function has to be written
 		num = (unsigned char)va_arg(args,int);
 	}
 	else if (conversion->length == H)

@@ -19,12 +19,7 @@ void	print_args(t_format *format, t_conversion *conversion, va_list args)
 	else if (conversion->specifier == U_DECIMAL)
 		print_int(format, conversion, args);
   	else if (conversion->specifier == CHAR)
-    {
-       // if (conversion->length == L)
-       //     print_wint(format, conversion, va_arg(args, wint_t char_in));
-       // else
             print_c(format, conversion, va_arg(args, int));
-    }
 	else if (conversion->specifier == STRING)
       //  if (conversion->specifier == L)
          //   print_wchar(format, conversion, va_arg(args, wchar_t *))
@@ -39,7 +34,6 @@ void	print_args(t_format *format, t_conversion *conversion, va_list args)
         print_binary(format, conversion, args);
     else if (conversion->specifier == NONE)
         print_none(format, va_arg(args, int *));
-
 }
 
 void    manage_format(t_format *format, va_list args)
@@ -52,8 +46,6 @@ void    manage_format(t_format *format, va_list args)
   manage_precision(format, &conversion);
   manage_length(format, &conversion);
   manage_specifier(format, &conversion);
- // if (conversion.specifier == NONE)
-   //   return ;
   print_args(format, &conversion, args);
 }
 
@@ -82,9 +74,6 @@ void    traverse(t_format *format, va_list args)
                  count += 1;
                  if (count == 2 && FSP == '%')
                  {
-               //     write(1, "%", 1);
-              //      format->zero_writ = 1;
-              //      format->num_writt++;
                     print_percent(format);
                     count = 0;
                  }
@@ -95,7 +84,6 @@ void    traverse(t_format *format, va_list args)
         }
         else
         {
-    //  ft_putchar(FSP);
             write(1, &FSP, 1);
             format->num_writt++;
             format->pos++;
@@ -111,10 +99,7 @@ int     ft_printf(const char *string, ...)
   ft_memset(&format, '\0', sizeof(format));
   format.string = string;
   va_start(args, string);
- // format.string = string;
   traverse(&format, args);
   va_end(args);
-//  if (format.zero_writ == 1)
- //     return (-1);
   return (format.num_writt);
 }

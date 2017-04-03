@@ -12,19 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-/*  void	print_precision_string(t_format *format, t_conversion *conversion,
-        char *string)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (string[i] && i <= conversion->precision)
-	{
-		ft_putchar(string[i]);
-		i++;
-		format->num_writt++;
-	}
- } */
  void	right_justify(t_format *format, t_conversion *conversion, char *s)
  {
    size_t  i;
@@ -40,7 +27,6 @@
    while ((len + i) < conversion->width)
    {
      write(1, " ", 1);
-//     ft_putchar(' ');
      i++;
      format->num_writt++;
    }
@@ -49,7 +35,6 @@
      if (PRINT_PREC_CHECK)
        break;
      write(1, &s[j], 1);
-//     ft_putchar(s[j]);
      j++;
      format->num_writt++;
    }
@@ -65,14 +50,12 @@
      if (LEFT_PREC_CHECK) //what cases is this needed
        break ;
      write(1, &s[i], 1);
-//     ft_putchar(s[i]);
      i++;
      format->num_writt++;
    }
    while (i < conversion->width)
    {
      write(1, " ", 1);
-//     ft_putchar(' ');
      i++;
      format->num_writt++;
    }
@@ -111,8 +94,6 @@ void    print_c(t_format *format, t_conversion *conversion, char incoming)
 
 void	print_string(t_format *format, t_conversion *conversion, char *string)
 {
-//    if (conversion->precision_on)
-//		print_precision_string(format, conversion, string);
     if (!string)
         string = ft_strdup("(null)");
 	if (conversion->flags.left_just)

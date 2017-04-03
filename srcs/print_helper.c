@@ -12,21 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-/*  void    print_hash(t_format *format, t_conversion *conversion)
-{
-    if (conversion->flags.hash)
-    {
-        if (conversion->specifier == OCTAL)
-            write(1, "0", 1);
-        else if (conversion->specifier == HEX_LOWER)
-            ft_putstr("0x");
-        else if (conversion->specifier == HEX_UPPER)
-            ft_putstr("0X");
-        format->num_writt++;
-    }
-}
-*/
-
 void    print_precision(t_format *format, t_conversion *conversion,
         int zero_print, int num_len)
 {
@@ -39,16 +24,12 @@ void    print_precision(t_format *format, t_conversion *conversion,
         if (conversion->is_negative)
             zero_print += 1;
     }
-//    if (zero_print > num_len)
- //   {
         while( zero_print > 0 && conversion->precision >
                 (unsigned int) num_len)
         {
             write(1, "0", 1);
-  //          ft_putchar('0');
             format->num_writt++;
             zero_print--;
-   //     }
     }
 }
 
@@ -61,13 +42,11 @@ void    print_sign(t_format *format, t_conversion *conversion)
         if (conversion->is_negative)
         {
             write(1, "-", 1);
-        //    ft_putchar('-');
             format->num_writt++;
         }
         else
         {
             write(1, "+", 1);
-          //  ft_putchar('+');
             format->num_writt++;
          }
     }
@@ -76,20 +55,17 @@ void    print_sign(t_format *format, t_conversion *conversion)
         if (!conversion->is_negative)
         {
             write(1, " ", 1);
-          //  ft_putchar(' ');
             format->num_writt++;
         }
        else if (conversion->is_negative)
         {
             write(1, "-", 1);
-            //ft_putchar ('-');
             format->num_writt++;
         }
     }
     else if (conversion->is_negative)
     {
         write(1, "-", 1);
-      //  ft_putchar ('-');
         format->num_writt++;
     }
 }
@@ -104,7 +80,6 @@ void    print_extra_width(t_format *format, t_conversion *conversion,
         {
            ft_putchar('-');
            format->num_writt++;
-       //    num_space--;
            conversion->is_negative = 0;
            conversion->flags.sign = 0;
         }

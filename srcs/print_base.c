@@ -55,8 +55,6 @@ void    ft_putnbr_base(t_format *format, t_conversion *conversion,
         format->num_writt++;
         return ;
     }
-    //if (num == 0 && conversion->precision_on && !conversion->precision)
-    //    return ;
     if (conversion->flags.hash)
     {
         if (conversion->specifier == OCTAL)
@@ -85,22 +83,18 @@ void    ft_putnbr_base(t_format *format, t_conversion *conversion,
         if (!conversion->flags.pad_wz)
             print_hash(format, conversion);
     }
- //        print_extra_width(format, conversion, num_space, pad);
     print_sign(format, conversion);
     if (conversion->flags.left_just)
         print_hash(format, conversion);
     print_precision(format, conversion, conversion->precision, num_len);
-//    print_hash(format, conversion);
     while (str_num[i])
     {
         write(1, &str_num[i], 1);
-//        ft_putchar(str_num[i]);
         format->num_writt++;
         i++;
     }
     if (conversion->flags.left_just)
         print_extra_width(format, conversion, num_space, pad, num_len);
-  //  free(str_num);
 }
 
 void    check_length(t_format *format, t_conversion *conversion,
