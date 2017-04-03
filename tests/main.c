@@ -16,8 +16,8 @@
 int main(void)
 {
 
-    int i;
-    int j;
+ //   int i;
+ //   int j;
   //  int x;
   //  int y;
 
@@ -29,8 +29,8 @@ int main(void)
 //     ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%\n");
 //    i = printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
 //    j = ft_printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
-   i =  printf ("{%-30S\n}", L"我是一只猫。");
-   j =  ft_printf ("{%-30S\n}", L"我是一只猫。");
+//   i =  printf ("{%-30S\n}", L"我是一只猫。");
+//   j =  ft_printf ("{%-30S\n}", L"我是一只猫。");
  //   printf(".%%.%%.%%.%%.%%.%%.%%.%%.\n");
  //   printf("%d   | |", i);
   //  printf("  %d\n", j);
@@ -59,8 +59,9 @@ int main(void)
 //    i = printf("<%%%%%%%%%%>\n");
 //    j = ft_printf("<%%%%%%%%%%>\n");
 //    write(1, &i, 1);
-    printf("%d   | |", i);
-    printf("  %d\n", j);
+    ft_printf("%b", 100);
+//    printf("%d   | |", i);
+//    printf("  %d\n", j);
   //  write(1, "\n", 1);
   //  write(1, &j, 1);
     //ft_printf("%-18s: <%+o\n","ft_printf %+o ", 42);

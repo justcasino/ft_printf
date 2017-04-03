@@ -48,8 +48,7 @@ typedef enum        e_length
 
 typedef enum        e_specifier
 {
-    S_DECIMAL, U_DECIMAL, OCTAL, HEX_LOWER, HEX_UPPER, CHAR, STRING, POINTER,
-    INVALID, NONE
+    BINARY,S_DECIMAL, U_DECIMAL, OCTAL, HEX_LOWER, HEX_UPPER, CHAR, STRING, POINTER,INVALID, NONE
 }       t_specifier;
 
 typedef struct    s_conversion
@@ -79,6 +78,10 @@ char    *load_base_char(t_conversion *conversion, int base);
 char    *ft_itoa_base(uintmax_t num, t_conversion *conversion);
 char    *ft_itoa_uintmax(uintmax_t num);
 /*
+** functions in print_binary.c
+*/
+void     print_binary(t_format *format, t_conversion *conversion, va_list args);
+/* 
 ** functions in ft_putnbr_just.c
 */
 void    ft_putnbr_right_just(t_format *format, t_conversion *conversion,
@@ -129,7 +132,7 @@ void    print_extra_width(t_format *format, t_conversion *conversion,
 */
 void    unsigned_int(t_format *format, t_conversion *conversion,
         va_list args);
-void    neg_signt_int(t_format *format, t_conversion *conversion,
+void    neg_signed_int(t_format *format, t_conversion *conversion,
         intmax_t num);
 void    signed_int(t_format *format, t_conversion *conversion,
         va_list args);

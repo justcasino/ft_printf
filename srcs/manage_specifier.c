@@ -70,6 +70,8 @@ int     valid_specifier(t_format *format, t_conversion *conversion)
     if (FSP == 'C')
       conversion->length = L;
   }
+  else if (FSP == 'b')
+      conversion->specifier = BINARY;
   else
     return (0);
   return (1);
