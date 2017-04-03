@@ -53,6 +53,12 @@ void print_pointer(t_format *format, t_conversion *conversion, void *pointer)
 
     pad =' ';
     conversion->specifier = HEX_LOWER;
+    if (pointer == NULL)
+    {
+            ft_putstr("0x0");
+            format->num_writt += 2;
+            return ;
+    }
     new_point = (uintmax_t)pointer;
     ft_putpnt(format, conversion, new_point, pad, 16);
 }
